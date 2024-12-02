@@ -67,6 +67,21 @@ public class SimpleMathTest {
     }
 
     @Test
+    @DisplayName("Divisão por zero")
+    void testeDivisao_por_zero() {
+        Double firstNumber = 6D;
+        Double secondNumber = 0D;
+
+        var expectedMessage = "Impossível dividir por zero";
+
+        ArithmeticException actual = Assertions.assertThrows(ArithmeticException.class, () -> {
+            math.division(firstNumber, secondNumber);
+        }, () -> "divisão por zero pode capturar uma exceção");
+
+        Assertions.assertEquals(expectedMessage, actual.getMessage(), () -> "mensagem de exceção inesperada.");
+    }
+
+    @Test
     @DisplayName("Media 6 + 2 / 2 = 4")
     void testeMedia_seis_and_dois_is_quatro() {
         Double actual = math.mean(6D, 2D);

@@ -1,16 +1,19 @@
 package com.project.simplemath;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.project.simpleMath.SimpleMath;
 
+@DisplayName("Testes na classe SimpleMath")
 public class SimpleMathTest {
 
     SimpleMath math = new SimpleMath();
 
     @Test
-    void testSum() {
+    @DisplayName("Soma 6.2 + 2 = 8.2")
+    void testeSoma_seis_ponto_dois_mais_dois_is_oito_ponto_dois() {
         Double actual = math.sum(6.2D, 2D);
         Double expected = 8.2D;
 
@@ -22,7 +25,8 @@ public class SimpleMathTest {
     }
 
     @Test
-    void testSubtraction() {
+    @DisplayName("Subtração 6.2 - 2 = 4.2")
+    void testeSubtracao_seis_ponto_dois_menos_dois_is_quatro_ponto_dois() {
         Double actual = math.subtraction(6.2D, 2D);
 
         Double expected = 4.2D;
@@ -35,7 +39,8 @@ public class SimpleMathTest {
     }
 
     @Test
-    void testMultiplication() {
+    @DisplayName("Multiplicação 6.2 * 2 = 12.4")
+    void testeMultiplicacao_seis_ponto_dois_vezes_dois_is_doze_ponto_quatro() {
         Double actual = math.multiplication(6.2D, 2D);
 
         Double expected = 12.4D;
@@ -48,7 +53,8 @@ public class SimpleMathTest {
     }
 
     @Test
-    void testDivision() {
+    @DisplayName("Divisão 6 / 2 = 3")
+    void testeDivisao_seis_divididopor_dois_is_tres() {
         Double actual = math.division(6D, 2D);
 
         Double expected = 3D;
@@ -61,7 +67,8 @@ public class SimpleMathTest {
     }
 
     @Test
-    void testMean() {
+    @DisplayName("Media 6 + 2 / 2 = 4")
+    void testeMedia_seis_and_dois_is_quatro() {
         Double actual = math.mean(6D, 2D);
 
         Double expected = 4D;
@@ -74,7 +81,8 @@ public class SimpleMathTest {
     }
 
     @Test
-    void testSquareRoot() {
+    @DisplayName("Raiz quadrada 25 = 5")
+    void testeRaizQuadrada_vinte_e_cinco() {
         Double actual = math.squareRoot(25D);
 
         Double expected = 5D;
